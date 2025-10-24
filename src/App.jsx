@@ -1,20 +1,19 @@
-import Header from "./Header"
+import Login , { Profile , Setting}from "./UserComponent"
+
 
 
 function App() {
 
   return (
     <>
-    <Header/>
-
-    <h1>code step by step</h1>
-    <h1>hello react</h1>
-
-
+    <h1> importing and exporting component</h1>
+    <Login/>
+    <Profile/>
+    <Setting/>
     </>
-  
-      
   )
 }
 
+
+  
 export default App
