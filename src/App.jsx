@@ -1,24 +1,24 @@
 
 import  {useState} from 'react'
-import User from './User.jsx'
 
 function App() {
-  const [ display , setDisPlay]= useState(false);
+  const [ count, setCount]= useState(0);
+
+  
   
   return (
     <>
-    <h1> Toggle in react js </h1>
-    <button  onClick={()=> setDisPlay(!display)}>  toggle </button>
-    {/* {
-      display? <h1> Tanya Agrahari</h1>: null
-    }
-    */}
-    {/*  note here  in jsx expression like the conditional render must be inside curly braces {},  otherwise react will treat them as plain tet a d not javascript */}
-    {
+    <h1> multiple conditions </h1>
+    <h1>{count}</h1>
+    <button onClick={()=> setCount(count+1)}> update count </button>
 
-    display ? <User/>: null
-    }
+    {count ==0?  <h1>  condition 0</h1>
+    : count ==1 ? <h1> condition 1</h1>
+    : count ==2 ? <h1> condition 2</h1>
+     : count ==3 ? <h1> condition 3</h1> 
+    :<h1> other conditions</h1>}
 
+   
   
     </>
   )
