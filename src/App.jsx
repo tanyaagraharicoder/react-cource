@@ -1,14 +1,27 @@
 
+
+ const fruit=( name)=>{
+    alert(name)
+  }
+
 function App() {
-  const userName ="Tanya agrahari"
-  let x=32
-  let y= 89
+  function callFun(){
+    alert("function called")
+  }
+  const fruit=( name)=>{
+    alert(name)
+  }
+ 
 
   return (
     <>
-    <h1> {userName}</h1>
-    <h1>{x+y}</h1>
-    <button onClick={()=> alert("hello")}> click</button>
+    <h1> event and function </h1>
+    {/*  here we just pass function defition of callFun because onClick don not work with function call like callFun() */}
+    <button onClick={callFun}> click here</button>
+    {/*  here we take an exaple ike if we have to  pass paameter then we use it like this  */}
+    <button onClick={()=>fruit("apple")}> apple </button>
+
+   
 
 
  
