@@ -1,32 +1,30 @@
 
-
- const fruit=( name)=>{
-    alert(name)
-  }
-
+import  {useState} from 'react'
+import Counter from './Counter'
 function App() {
-  function callFun(){
-    alert("function called")
-  }
-  const fruit=( name)=>{
-    alert(name)
-  }
- 
+  const[  fruits, setFruits]= useState("appple")
 
+  
+  const handlefruit=()=>{
+    setFruits("banana")
+  }
   return (
     <>
-    <h1> event and function </h1>
-    {/*  here we just pass function defition of callFun because onClick don not work with function call like callFun() */}
-    <button onClick={callFun}> click here</button>
-    {/*  here we take an exaple ike if we have to  pass paameter then we use it like this  */}
-    <button onClick={()=>fruit("apple")}> apple </button>
-
-   
+    <h1> state in react </h1>
+    <h2> fruit is : {fruits} </h2>
+    <button onClick={handlefruit}> change Fruit Name  </button>
+    <Counter/>
 
 
- 
+    
+    
+
     </>
   )
+  
+
+ 
+    
 }
 
 
