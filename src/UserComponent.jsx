@@ -20,4 +20,5 @@ export function Setting(){
     </>
   )
 }
+export const UserKey="fkrnn4343121@!$#@@1";
 export default Login
