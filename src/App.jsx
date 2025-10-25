@@ -1,24 +1,25 @@
 
 import  {useState} from 'react'
-import Counter from './Counter'
-function App() {
-  const[  fruits, setFruits]= useState("appple")
+import User from './User.jsx'
 
+function App() {
+  const [ display , setDisPlay]= useState(false);
   
-  const handlefruit=()=>{
-    setFruits("banana")
-  }
   return (
     <>
-    <h1> state in react </h1>
-    <h2> fruit is : {fruits} </h2>
-    <button onClick={handlefruit}> change Fruit Name  </button>
-    <Counter/>
+    <h1> Toggle in react js </h1>
+    <button  onClick={()=> setDisPlay(!display)}>  toggle </button>
+    {/* {
+      display? <h1> Tanya Agrahari</h1>: null
+    }
+    */}
+    {/*  note here  in jsx expression like the conditional render must be inside curly braces {},  otherwise react will treat them as plain tet a d not javascript */}
+    {
 
+    display ? <User/>: null
+    }
 
-    
-    
-
+  
     </>
   )
   
