@@ -1,40 +1,44 @@
-import CheckBox from "./Checkbox";
-import { useState } from "react";
+
 
 function App() {
-  const [gender, setGender] = useState("male");
-  const [city, setCity] = useState("noida");
+  const userName=['Anil','Sunil','Kiran','Ravi','Ramesh'];
+  const userData=[
+    {name :'Anil', age :67, email: "swqdwe.com",id: 1 },
+    {name :'Sunil', age :34, email: "asdasd.com",id: 2 },
+    {name :'Kiran', age :23, email: "zxcxz.com",id: 3 },
+    {name :'Ravi', age :45, email:" qweqwe.com",id: 4 },
+    {name :'Ramesh', age :29, email:" asdasd.com",id: 5 },
+  ]
+
+
 
   return (
     <>
-      <h1> Handle Radio and dropdown </h1>
-      <h1> select gender</h1>
-      <input
-        type="radio"
-        onChange={(event) => setGender(event.target.value)}
-        value={"male"}
-        checked={gender == "male"}
-        name="gender"
-        id="male"
-      />
-      <label htmlFor="male">Male</label>
-      <input
-        type="radio"
-        name="gender"
-        onChange={(event) => setGender(event.target.value)}
-        value={"female"}
-        checked={gender == "female"}
-        id="female"
-      />
-      <label htmlFor="female"> Female</label>
-      <h2> seleted gender : {gender}</h2>
-      <select defaultValue={"noida"} onChange={(event)=> setCity(event.target.value)}>
-        <option value="bnaras">bnaras</option>
-        <option value="jaunpur">jaunpur</option>
-        <option value="noida">Noida</option>
-        <br /> <br />
-      </select>
-        <h2>selected city:{city}</h2>
+    <h1> Loop in jsx with Map function</h1>
+
+     <table border={1} style={{margin:'auto'}}>
+      <thead>
+        <tr>
+          <td> id</td>
+          <td> name </td>
+          <td> email </td>
+          <td> age </td>
+
+        </tr>
+      </thead>
+      <tbody>
+       {
+        userData.map((user)=>(
+          <tr key={user.id}>
+            <td>{user.id}</td>
+            <td>{user.name}</td>
+            <td>{user.email}</td>
+            <td>{user.age}</td>
+          </tr>
+        ))
+       }
+      </tbody>
+     </table>
     </>
   );
 }
