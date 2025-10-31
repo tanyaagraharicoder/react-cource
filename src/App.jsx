@@ -1,3 +1,4 @@
+import User from "./User";
 
 
 function App() {
@@ -14,31 +15,15 @@ function App() {
 
   return (
     <>
-    <h1> Loop in jsx with Map function</h1>
-
-     <table border={1} style={{margin:'auto'}}>
-      <thead>
-        <tr>
-          <td> id</td>
-          <td> name </td>
-          <td> email </td>
-          <td> age </td>
-
-        </tr>
-      </thead>
-      <tbody>
-       {
-        userData.map((user)=>(
-          <tr key={user.id}>
-            <td>{user.id}</td>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td>{user.age}</td>
-          </tr>
-        ))
-       }
-      </tbody>
-     </table>
+    <h1> reuse componnet in loops </h1>
+    {
+      userData.map((user)=>(
+        <div  key={user.id}> 
+          <User user= {user}/>
+       </div>
+      ))
+    }
+   
     </>
   );
 }
