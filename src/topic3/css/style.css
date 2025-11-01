@@ -1,0 +1,28 @@
+.heading{
+    color:blue;
+  
+}
+.img-style{
+    width:200px;
+     margin-bottom: 20px;
+    
+
+}
+.user-card{
+    margin:10px;
+    width:200px;
+    border:1px solid grey;
+    box-shadow: 1px 1px 5px grey;
+}
+.text-wrap{
+    padding: 10px;
+
+}
+.container{
+    display: flex;
+    
+}
+
+
+
+
